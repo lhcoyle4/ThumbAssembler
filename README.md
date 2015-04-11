@@ -1,0 +1,2 @@
+# asm
+A project to write a compiler in C. My intent is to write a set of ARM Thumb-like instructions which will compile down to 16-bit binary. The binary should then be executable on a 16-bit CPU instantiated on an FPGA.
