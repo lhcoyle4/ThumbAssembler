@@ -112,10 +112,10 @@ void lstBin( char* lstfile, char* binfile )
   {
     while( !feof( infile ) )
     {
-        fread( hexstring, 1, 8, infile );
+        fgets( hexstring, 10, infile );
         hexBin( hexstring, binstring );
-        fwrite( binstring, 1, 32, outfile );
-        fputc ( '\n', outfile ); 
+        fputs( binstring, outfile );
+        fputc( '\n', outfile );
         /* somehow have to append a newline to end of each binary opcode.
            this must be at the end of the opcode, not the end of the 32 characters. */
     }
