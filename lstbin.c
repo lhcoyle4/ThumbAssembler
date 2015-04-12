@@ -115,7 +115,9 @@ void lstBin( char* lstfile, char* binfile )
         fread( hexstring, 1, 8, infile );
         hexBin( hexstring, binstring );
         fwrite( binstring, 1, 32, outfile );
-        fputc ( '\n', outfile );
+        fputc ( '\n', outfile ); 
+        /* somehow have to append a newline to end of each binary opcode.
+           this must be at the end of the opcode, not the end of the 32 characters. */
     }
     fclose( infile );
     fclose( outfile );
